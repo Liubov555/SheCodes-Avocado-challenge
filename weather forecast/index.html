@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond&family=Libre+Franklin:wght@100&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./src/styles.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="visually-hidden">
+            Weather in Ukrain
+        </h1>
+        <ul class="navigation">
+            <li class="main-city current">
+                Kyiv
+            </li>
+            <li class="main-city">
+                Lviv
+            </li>
+            <li class="main-city">
+                Odesa
+            </li>
+            <li class="main-city">
+                Kharkiv
+            </li>
+        </ul>
+        <div class="form-search">
+            <form id="form">
+                <input class="form-input" id="form-input" type="text" placeholder="Enter a city" />
+                <button class="search-button" type="submit">
+                    Search
+                </button>
+                <button class="current-city-button" type="button" id="currentButton">
+                    Current City
+                </button>
+            </form>
+        </div>
+        <div class="current-city">
+            <div class="date-and-city">
+                <h2 class="city">
+                    <span class="city" id="displayedCity">Kyiv</span>
+                </h2>
+                <p class="date" id="nowDate">
+                    11:00 - June 4, Saturday
+                </p>
+            </div>
+            <div class="current-city-icon">
+                ☀
+            </div>
+            <div class=temperature-group>
+
+                <span class="temperature-now" id="temperature">22</span>
+                <span class="units">
+                    <a href="#" id="celsius-link">°C</a> |
+                    <a href="#" id="fahrenheit-link">°F</a>
+                </span>
+            </div>
+
+            <div class="weather-group">
+                <div class="current-weather">
+                    <p class="current-weather-text">
+                        <span id="description">Light cloud</span>
+                        <br />
+                        Humidity: <span id="humidity">15</span>%
+                        <br />
+                        Wind: <span id="wind">20</span> km/h
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div>
+            <div class="row">
+                <div class=" col days-group">
+                    <h3 class="days">
+                        Sun 5th
+                    </h3>
+                    <p class="icon">
+                        ⛅
+                    </p>
+                    <p class="temperature">
+                        +20°C
+                    </p>
+                    <p class="weather">
+                        Sunny intervals
+                    </p>
+                </div>
+                <div class=" col days-group">
+                    <h3 class=" days">
+                        Mon 6th
+                    </h3>
+                    <p class="icon">
+                        🌥
+                    </p>
+                    <p class="temperature">
+                        +19°C
+                    </p>
+                    <p class="weather">
+                        Light cloud
+                    </p>
+                </div>
+                <div class="col days-group">
+                    <h3 class="days">
+                        Tue 7th
+                    </h3>
+                    <p class="icon">
+                        ☁
+                    </p>
+                    <p class="temperature">
+                        +18°C
+                    </p>
+                    <p class="weather">
+                        Cloudy
+                    </p>
+                </div>
+                <div class="col days-group">
+                    <h3 class="days">
+                        Wen 8th
+                    </h3>
+                    <p class="icon">
+                        ⛅
+                    </p>
+                    <p class="temperature">
+                        +20°C
+                    </p>
+                    <p class="weather">
+                        Sunny intervals
+                    </p>
+                </div>
+                <div class="col days-group">
+                    <h3 class="days">
+                        Thu 9th
+                    </h3>
+                    <p class="icon">
+                        ☀
+                    </p>
+                    <p class="temperature">
+                        +24°C
+                    </p>
+                    <p class="weather">
+                        Sunny
+                    </p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <script src="./src/index.js"></script>
+</body>
+
+</html>

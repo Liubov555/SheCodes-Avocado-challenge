@@ -1,0 +1,154 @@
+body {
+    font-family: "Libre Franklin", sans-serif;
+}
+
+.visually-hidden {
+    color: blue;
+    display: none;
+}
+
+.navigation {
+    display: flex;
+    justify-content: first baseline;
+    list-style: none;
+    padding-left: 15px;
+    margin-top: 40px;
+    margin-bottom: 30px;
+}
+
+.main-city {
+    font-family: "EB Garamond", serif;
+    font-size: 25px;
+    color: #55a7f6;
+    font-weight: bold;
+}
+
+.main-city.current {
+    border-bottom: 4px solid #55a7f6;
+    border-radius: 2px;
+}
+
+.main-city:not(:last-child) {
+    margin-right: 50px;
+}
+
+.form-search {
+    display: flex;
+    justify-content: first baseline;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.form-input {
+    width: 370px;
+    border-width: 1px;
+    border-color: gray;
+    border-radius: 5px;
+    box-shadow: 0 10px 10px -5px #b6b5b5;
+    margin-right: 20px;
+}
+
+.search-button,
+.current-city-button {
+    color: white;
+    border: none;
+    border-radius: 2px;
+    font-weight: 500;
+}
+
+.search-button:hover,
+.current-city-button:hover {
+    cursor: pointer;
+}
+
+.search-button {
+    background-color: #8ec351;
+    padding: 5px 25px;
+    margin-right: 10px;
+}
+
+.current-city-button {
+    background-color: #54a5f5;
+    padding: 5px 15px;
+}
+
+.current-city {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 40px;
+}
+
+.city {
+    font-family: "EB Garamond", serif;
+    font-size: 35px;
+    text-align: center;
+    color: #69c2ba;
+    background-color: #e9f7f6;
+}
+
+.date {
+    font-family: "EB Garamond", serif;
+    font-style: italic;
+    color: #8d236a;
+    background-color: #fbedcc;
+    padding-right: 7px;
+    margin-bottom: 0px;
+}
+
+.temperature-now {
+    color: black;
+    font-size: 64px;
+    font-weight: 400;
+    float: left !important;
+}
+
+.temperature-group::after {
+    display: block;
+    clear: both;
+    content: "";
+}
+
+.weather-group {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 180px;
+}
+
+.units::after {
+    position: relative;
+    top: -30px;
+}
+
+.current-city-icon {
+    margin-right: 50px;
+}
+
+.current-weather-text {
+    text-align: center;
+}
+
+.days-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.days {
+    font-family: "EB Garamond", serif;
+    font-size: 18px;
+    font-weight: bold;
+    color: #54a5f5;
+}
+
+.temperature,
+.weather {
+    color: #5c6477;
+}
+
+.temperature {
+    font-size: 15px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
