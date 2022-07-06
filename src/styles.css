@@ -103,10 +103,15 @@ body {
     float: left !important;
 }
 
+.temperature-group {
+    font-weight: 600;
+}
+
 .temperature-group::after {
     display: block;
     clear: both;
     content: "";
+
 }
 
 .weather-group {
@@ -119,6 +124,16 @@ body {
 .units::after {
     position: relative;
     top: -30px;
+
+}
+
+.units .active {
+    color: black;
+    cursor: default;
+}
+
+.units .active:hover {
+    text-decoration: none;
 }
 
 .current-city-icon {
