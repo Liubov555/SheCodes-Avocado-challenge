@@ -67,7 +67,9 @@ function showWeather(response) {
     iconElement.setAttribute("src", `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
     iconElement.setAttribute("alt", `${response.data.weather[0].description}`);
 
+
     celsiusTemperature = response.data.main.temp;
+
 }
 
 function searchCity(city) {
@@ -105,8 +107,6 @@ searchCity("Kyiv");
 
 /* Convert Celsius - Fahrenheit */
 
-
-
 function convertToFahrenheit(event) {
     event.preventDefault();
     let temperatureElement = document.querySelector("#temperature");
@@ -128,3 +128,34 @@ fahrenheitLink.addEventListener("click", convertToFahrenheit);
 
 let celsiusLink = document.querySelector("#celsius-link");
 celsiusLink.addEventListener("click", convertToCelsius);
+
+/*Weather for the week */
+
+function displayForecast() {
+    let forecastElement = document.querySelector("#forecast");
+    let forecastHTML = `<div class="row">`;
+    let days = ["Mon", "Tue", "Wed", "Thu", "Fri"];
+    days.forEach(function (day) {
+        forecastHTML = forecastHTML + `
+                <div class=" col-2 days-group">
+                    <h3 class="days">
+                        ${day} 
+                    </h3>
+                    <img src="https://openweathermap.org/img/wn/50d@2x.png" alt="" width = "55">
+                    <p class="temperature">
+                        +20°C
+                    </p>
+                    <p class="weather">
+                        Sunny intervals
+                    </p>
+                </div>
+    `;
+
+    });
+
+
+    forecastHTML = forecastHTML + `</div>`;
+    forecastElement.innerHTML = forecastHTML;
+}
+
+displayForecast();
