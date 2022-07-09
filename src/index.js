@@ -40,6 +40,61 @@ function dateNow(date) {
 }
 nowDate.innerHTML = dateNow(new Date);
 
+/*Weather for the week */
+
+function formatDay(timestempt) {
+    let date = new Date(timestempt * 1000);
+    let day = date.getDay();
+    let days = ["San",
+        "Mon",
+        "Tue",
+        "Wed",
+        "Thu",
+        "Fri",
+        "Sat"];
+    return days[day];
+}
+
+function displayForecast(response) {
+    let forecast = response.data.daily;
+
+    let forecastElement = document.querySelector("#forecast");
+
+    let forecastHTML = `<div class="row">`;
+
+    forecast.forEach(function (forecastDay, index) {
+
+        if (index < 6) {
+
+            forecastHTML = forecastHTML + `
+                <div class=" col-2 days-group">
+                    <h3 class="days">
+                        ${formatDay(forecastDay.dt)} 
+                    </h3>
+                    <img 
+                      src="http://openweathermap.org/img/wn/${forecastDay.weather[0].icon}@2x.png"
+                alt=""
+                     width = "55"
+                     />
+                    <p class="temperature">
+                    
+                       ${Math.round(forecastDay.temp.max)}°C
+                    </p>
+                    <p class="weather">
+                        ${forecastDay.weather[0].main}
+                    </p>
+                </div >
+                `;
+
+        }
+    });
+
+
+    forecastHTML = forecastHTML + `</div > `;
+    forecastElement.innerHTML = forecastHTML;
+}
+
+
 /* Search City */
 function formInput(event) {
     event.preventDefault();
@@ -136,33 +191,5 @@ fahrenheitLink.addEventListener("click", convertToFahrenheit);
 let celsiusLink = document.querySelector("#celsius-link");
 celsiusLink.addEventListener("click", convertToCelsius);
 
-/*Weather for the week */
-
-function displayForecast(response) {
-    let forecastElement = document.querySelector("#forecast");
-    let forecastHTML = `<div class="row">`;
-    let days = ["Mon", "Tue", "Wed", "Thu", "Fri"];
-    days.forEach(function (day) {
-        forecastHTML = forecastHTML + `
-                <div class=" col-2 days-group">
-                    <h3 class="days">
-                        ${day} 
-                    </h3>
-                    <img src="https://openweathermap.org/img/wn/50d@2x.png" alt="" width = "55">
-                    <p class="temperature">
-                        +20°C
-                    </p>
-                    <p class="weather">
-                        Sunny intervals
-                    </p>
-                </div>
-    `;
-
-    });
-
-
-    forecastHTML = forecastHTML + `</div>`;
-    forecastElement.innerHTML = forecastHTML;
-}
 
 
