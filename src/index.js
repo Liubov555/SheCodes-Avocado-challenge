@@ -167,29 +167,5 @@ let currentButton = document.querySelector("#currentButton");
 currentButton.addEventListener("click", currentLocation);
 searchCity("Kyiv");
 
-/* Convert Celsius - Fahrenheit */
-
-function convertToFahrenheit(event) {
-    event.preventDefault();
-    let temperatureElement = document.querySelector("#temperature");
-    celsiusLink.classList.remove("active");
-    fahrenheitLink.classList.add("active");
-    temperatureElement.innerHTML = Math.round((celsiusTemperature * 9) / 5 + 32);
-}
-
-function convertToCelsius(event) {
-    event.preventDefault();
-    celsiusLink.classList.add("active");
-    fahrenheitLink.classList.remove("active");
-    let temperatureElement = document.querySelector("#temperature");
-    temperatureElement.innerHTML = Math.round(celsiusTemperature);
-}
-
-let fahrenheitLink = document.querySelector("#fahrenheit-link");
-fahrenheitLink.addEventListener("click", convertToFahrenheit);
-
-let celsiusLink = document.querySelector("#celsius-link");
-celsiusLink.addEventListener("click", convertToCelsius);
-
 
 
