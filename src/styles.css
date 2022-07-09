@@ -2,57 +2,53 @@ body {
     font-family: "Libre Franklin", sans-serif;
 }
 
+img {
+    background-color: cadetblue;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.container {
+    margin: 30px auto;
+    padding: 20px;
+    border: 1px solid #dadde1;
+    border-radius: 5px;
+}
+
 .visually-hidden {
     color: blue;
     display: none;
-}
-
-.navigation {
-    display: flex;
-    justify-content: first baseline;
-    list-style: none;
-    padding-left: 15px;
-    margin-top: 40px;
-    margin-bottom: 30px;
-}
-
-.main-city {
-    font-family: "EB Garamond", serif;
-    font-size: 25px;
-    color: #55a7f6;
-    font-weight: bold;
-}
-
-.main-city.current {
-    border-bottom: 4px solid #55a7f6;
-    border-radius: 2px;
-}
-
-.main-city:not(:last-child) {
-    margin-right: 50px;
 }
 
 .form-search {
     display: flex;
     justify-content: first baseline;
     align-items: center;
+    margin-left: 15px;
     margin-bottom: 40px;
 }
 
 .form-input {
-    width: 370px;
-    border-width: 1px;
+    width: 420px;
+    height: 35px;
+    background: #f9f7fe;
+    border: 1px;
+
+    color: black font-size: 16px;
+    line-height: 20px;
     border-color: gray;
     border-radius: 5px;
     box-shadow: 0 10px 10px -5px #b6b5b5;
+    padding: 15px 20px;
     margin-right: 20px;
+
 }
 
 .search-button,
 .current-city-button {
     color: white;
     border: none;
-    border-radius: 2px;
+    border-radius: 4px;
     font-weight: 500;
 }
 
@@ -62,13 +58,13 @@ body {
 }
 
 .search-button {
-    background-color: #8ec351;
+    background-color: #e96d4c;
     padding: 5px 25px;
     margin-right: 10px;
 }
 
 .current-city-button {
-    background-color: #54a5f5;
+    background-color: cadetblue;
     padding: 5px 15px;
 }
 
@@ -76,6 +72,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    margin-left: 15px;
     margin-bottom: 40px;
 }
 
@@ -83,17 +80,19 @@ body {
     font-family: "EB Garamond", serif;
     font-size: 35px;
     text-align: center;
-    color: #69c2ba;
-    background-color: #e9f7f6;
+    color: cadetblue;
+    font-weight: bold;
+
 }
 
 .date {
     font-family: "EB Garamond", serif;
     font-style: italic;
-    color: #8d236a;
-    background-color: #fbedcc;
+    color: #e96d4c;
+    font-weight: bold;
     padding-right: 7px;
     margin-bottom: 0px;
+
 }
 
 .temperature-now {
@@ -121,19 +120,10 @@ body {
     padding-right: 180px;
 }
 
-.units::after {
+.units {
     position: relative;
-    top: -30px;
+    top: 20px;
 
-}
-
-.units .active {
-    color: black;
-    cursor: default;
-}
-
-.units .active:hover {
-    text-decoration: none;
 }
 
 .current-city-icon {
@@ -154,25 +144,36 @@ body {
     font-family: "EB Garamond", serif;
     font-size: 18px;
     font-weight: bold;
-    color: #54a5f5;
+    color: gray;
 }
 
-.temperature,
+.forecast-temp-max {
+    margin-bottom: 10px;
+}
+
+.forecast-temp-max,
+.forecast-temp-min {
+    font-size: 15px;
+    color: #5c6477;
+
+}
+
+.forecast-temp-max {
+    margin-right: 8px;
+    font-weight: bold;
+}
+
+.forecast-temp-min {
+    opacity: 0.8;
+}
+
 .weather {
     color: #5c6477;
-}
-
-.temperature {
-    font-size: 15px;
-    font-weight: bold;
-    margin-bottom: 5px;
 }
 
 .footer {
     display: flex;
     justify-content: center;
-    padding-top: 80px;
-
 }
 
 .footer-link {
